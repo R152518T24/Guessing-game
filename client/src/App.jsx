@@ -32,11 +32,11 @@ export default function App() {
       if (reason === 'winner') {
         const isMe = winner === playerName;
         addMessage(
-          isMe ? '🎉 You won!' : `${winner} won! The answer was: ${endedSession.answer}`,
+          isMe ? 'You won!' : `${winner} won! The answer was: ${endedSession.answer}`,
           'success'
         );
       } else {
-        addMessage(`⏰ Time's up! The answer was: ${endedSession.answer}`, 'system');
+        addMessage(`Time's up! The answer was: ${endedSession.answer}`, 'system');
       }
     });
 
@@ -421,14 +421,14 @@ export default function App() {
                     <>
                       <Trophy className="w-16 h-16 mx-auto text-yellow-500 mb-4" />
                       <h3 className="text-2xl font-bold mb-2">
-                        {session.winner === playerName ? 'You Won! 🎉' : `${session.winner} Won!`}
+                        {session.winner === playerName ? 'You Won!' : `${session.winner} Won!`}
                       </h3>
                       <p className="text-lg">Answer: <span className="font-bold">{session.answer}</span></p>
                     </>
                   ) : (
                     <>
                       <Clock className="w-16 h-16 mx-auto text-gray-500 mb-4" />
-                      <h3 className="text-2xl font-bold mb-2">Time's Up! ⏰</h3>
+                      <h3 className="text-2xl font-bold mb-2">Time's Up! </h3>
                       <p className="text-lg">The answer was: <span className="font-bold">{session.answer}</span></p>
                     </>
                   )}

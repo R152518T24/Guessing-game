@@ -4,9 +4,9 @@
   "description": "Multiplayer guessing game",
   "main": "server/src/server.js",
   "scripts": {
-    "install-client": "cd client && npm install",
-    "install-server": "cd server && npm install",
     "postinstall": "npm run install-client && npm run install-server && npm run build-client",
+    "install-client": "cd client && npm install --include=dev",
+    "install-server": "cd server && npm install",
     "build-client": "cd client && npm run build",
     "start": "cd server && node src/server.js",
     "dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run dev\""
